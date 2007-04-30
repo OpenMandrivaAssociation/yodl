@@ -1,12 +1,11 @@
 %define	name	yodl
 %define version 1.31.18
-%define release 12mdk
 %define url	ftp://ftp.lilypond.org/pub/yodl/development/
 
 Summary:	Yet oneOther Document Language.
 Name:		%{name}
 Version:	%{version}
-Release:	%{release}
+Release:	%mkrel 13
 License:	GPL
 Group:		Text tools
 URL:		http://www.xs4all.nl/~jantien/yodl
