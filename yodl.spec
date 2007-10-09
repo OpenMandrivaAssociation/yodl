@@ -2,7 +2,7 @@
 %define version 1.31.18
 %define url	ftp://ftp.lilypond.org/pub/yodl/development/
 
-Summary:	Yet oneOther Document Language.
+Summary:	Yet oneOther Document Language
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel 13
