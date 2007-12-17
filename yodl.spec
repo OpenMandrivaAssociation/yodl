@@ -10,7 +10,6 @@ License:	GPL
 Group:		Text tools
 URL:		http://www.xs4all.nl/~jantien/yodl
 Source:		%{url}/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 Prefix:		%{_prefix}
 Patch:		yodl-1.31.18-htmldocs.patch.bz2
 Patch1:		yodl-1.31.18-compile-fix-ia64.patch.bz2
