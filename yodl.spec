@@ -10,7 +10,7 @@ URL:		http://yodl.sourceforge.net/
 Source:		http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}_%{version}.orig.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildRequires:	tetex-latex
-Buildrequires:	icmake
+BuildRequires:	icmake
 
 %description
 Yodl is a package implementing a pre-document language and tools to 
