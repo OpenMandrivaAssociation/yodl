@@ -5,7 +5,7 @@
 Summary:	Yet oneOther Document Language
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel 16
+Release:	%mkrel 17
 License:	GPL
 Group:		Text tools
 URL:		http://www.xs4all.nl/~jantien/yodl
