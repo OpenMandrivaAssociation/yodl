@@ -36,13 +36,13 @@ designed to be easy to use and extensible.
 make htmldoc
 
 %install
-if [ -d $RPM_BUILD_ROOT ]; then rm -rf $RPM_BUILD_ROOT; fi
-mkdir -p $RPM_BUILD_ROOT%{prefix}
-%makeinstall datadir=$RPM_BUILD_ROOT%{_datadir}/%{name}
+if [ -d %{buildroot} ]; then rm -rf %{buildroot}; fi
+mkdir -p %{buildroot}%{prefix}
+%makeinstall datadir=%{buildroot}%{_datadir}/%{name}
 (find ./htmldocs-rpm/Documentation -size 0 | xargs rm -f)
 
 %clean
-if [ -d $RPM_BUILD_ROOT ]; then rm -rf $RPM_BUILD_ROOT; fi
+if [ -d %{buildroot} ]; then rm -rf %{buildroot}; fi
 
 %files
 %defattr(-,root,root)
