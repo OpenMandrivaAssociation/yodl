@@ -26,6 +26,7 @@ designed to be easy to use and extensible.
 %setup -q
 
 %build
+%setup_compile_flags
 ./build programs
 ./build man
 ./build manual
