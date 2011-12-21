@@ -12,7 +12,7 @@ Source0:		http://downloads.sourceforge.net/project/yodl/%{name}/%{version}/%{nam
 Prefix:		%{_prefix}
 BuildRequires:	bison, flex, diffutils, groff-for-man, libtool, netpbm, python, texinfo, icmake
 BuildRequires:	texlive-latex texlive-ntgclass texlive-epsf texlive-ec texlive-cm-super
-BuildRequires:	ghostscript-common
+BuildRequires:	ghostscript
 
 %description
 Yodl is a package that implements a pre-document language and tools to
