@@ -11,7 +11,7 @@ URL:		http://yodl.sourceforge.net
 Source0:		http://downloads.sourceforge.net/project/yodl/%{name}/%{version}/%{name}_%{version}.orig.tar.gz
 Prefix:		%{_prefix}
 BuildRequires:	bison, flex, diffutils, groff-for-man, libtool, netpbm, python, texinfo, icmake
-BuildRequires:	texlive-latex texlive-ntgclass texlive-epsf texlive-ec texlive-cm-super
+BuildRequires:	texlive-latex.bin texlive-ntgclass texlive-epsf texlive-ec texlive-cm-super
 BuildRequires:	ghostscript
 
 %description
