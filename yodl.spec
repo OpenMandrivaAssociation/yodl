@@ -4,7 +4,7 @@
 Summary:	Your Own Document Language
 Name:		%{name}
 Version:	%{version}
-Release:	9
+Release:	10
 License:	GPLv3
 Group:		Text tools
 URL:		http://yodl.sourceforge.net
