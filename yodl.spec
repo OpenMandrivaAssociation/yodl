@@ -1,6 +1,3 @@
-%define	name	yodl
-%define version 3.00.0
-
 Summary:	Your Own Document Language
 Name:		yodl
 Version:	4.02.01
@@ -28,12 +25,14 @@ designed to be easy to use and extensible.
 
 %build
 %setup_compile_flags
+cd %{name}
 ./build programs
 ./build man
 ./build manual
 ./build macros
 
 %install
+cd %{name}
 ./build install programs %{buildroot}
 ./build install man %{buildroot}
 ./build install manual %{buildroot}
