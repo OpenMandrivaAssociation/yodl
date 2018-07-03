@@ -1,3 +1,6 @@
+%define _disable_lto 1
+%define _disable_ld_as_needed 1
+
 Summary:	Your Own Document Language
 Name:		yodl
 Version:	4.02.01
