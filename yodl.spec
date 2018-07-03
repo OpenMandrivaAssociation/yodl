@@ -5,10 +5,23 @@ Release:	1
 License:	GPLv3
 Group:		Text tools
 URL:		http://yodl.sourceforge.net
-Source0:		https://gitlab.com/fbb-git/yodl/-/archive/%{version}/%{name}-%{version}.tar.bz2
-BuildRequires:	bison, flex, diffutils, groff-for-man, libtool, netpbm, python, texinfo, icmake
-BuildRequires:	texlive-latex-bin texlive-ntgclass texlive-epsf texlive-ec texlive-cm-super
-BuildRequires:	texlive-texconfig ghostscript
+Source0:	https://gitlab.com/fbb-git/yodl/-/archive/%{version}/%{name}-%{version}.tar.bz2
+BuildRequires:	icmake >= 9.02.02
+BuildRequires:	bison
+BuildRequires:	flex
+BuildRequires:	diffutils
+BuildRequires:	groff-for-man
+BuildRequires:	libtool
+BuildRequires:	netpbm
+BuildRequires:	python
+BuildRequires:	texinfo
+BuildRequires:	texlive-latex-bin
+BuildRequires:	texlive-ntgclass
+BuildRequires:	texlive-epsf
+BuildRequires:	texlive-ec
+BuildRequires:	texlive-cm-super
+BuildRequires:	texlive-texconfig
+BuildRequires:	ghostscript
 BuildRequires:	texlive
 
 %description
@@ -23,20 +36,27 @@ designed to be easy to use and extensible.
 %prep
 %setup -q
 
+# build with our compile flags
+sed -i -e 's|"#define COPT.*"|"#define COPT \"%{optflags}\""|' ./yodl/build
+
 %build
 %setup_compile_flags
+export CC=gcc
+export CXX=g++
+
 cd %{name}
 ./build programs
+./build macros
 ./build man
 ./build manual
-./build macros
 
 %install
 cd %{name}
 ./build install programs %{buildroot}
+./build install macros %{buildroot}
 ./build install man %{buildroot}
 ./build install manual %{buildroot}
-./build install macros %{buildroot}
+
 mv -f %{buildroot}%{_docdir}/yodl-doc %{buildroot}%{_docdir}/%{name}
 
 %files
