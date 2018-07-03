@@ -10,6 +10,7 @@ Group:		Text tools
 URL:		http://yodl.sourceforge.net
 Source0:	https://gitlab.com/fbb-git/yodl/-/archive/%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	icmake >= 9.02.02
+BuildRequires:	stdc++-static-devel
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	diffutils
