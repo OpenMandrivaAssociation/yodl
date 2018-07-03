@@ -25,6 +25,7 @@ BuildRequires:	texlive-epsf
 BuildRequires:	texlive-ec
 BuildRequires:	texlive-cm-super
 BuildRequires:	texlive-texconfig
+BuildRequires:	texlive-dehyph-exptl
 BuildRequires:	ghostscript
 BuildRequires:	texlive
 
