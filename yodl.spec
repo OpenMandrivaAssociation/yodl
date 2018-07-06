@@ -1,6 +1,8 @@
 %define _disable_lto 1
 %define _disable_ld_as_needed 1
 
+%bcond_with docs
+
 Summary:	Your Own Document Language
 Name:		yodl
 Version:	4.02.01
@@ -18,6 +20,7 @@ BuildRequires:	groff-for-man
 BuildRequires:	libtool
 BuildRequires:	netpbm
 BuildRequires:	python
+%if %{with docs}
 BuildRequires:	texinfo
 BuildRequires:	texlive-latex-bin
 BuildRequires:	texlive-ntgclass
@@ -28,6 +31,7 @@ BuildRequires:	texlive-texconfig
 BuildRequires:	texlive-dehyph-exptl
 BuildRequires:	ghostscript
 BuildRequires:	texlive
+%endif
 
 %description
 Yodl is a package that implements a pre-document language and tools to
@@ -53,16 +57,19 @@ cd %{name}
 ./build programs
 ./build macros
 ./build man
+%if %{with docs}
 ./build manual
+%endif
 
 %install
 cd %{name}
 ./build install programs %{buildroot}
 ./build install macros %{buildroot}
 ./build install man %{buildroot}
+%if %{with docs}
 ./build install manual %{buildroot}
-
 mv -f %{buildroot}%{_docdir}/yodl-doc %{buildroot}%{_docdir}/%{name}
+%endif
 
 %files
 %doc README.txt README.3.00.0
