@@ -72,7 +72,6 @@ mv -f %{buildroot}%{_docdir}/yodl-doc %{buildroot}%{_docdir}/%{name}
 %endif
 
 %files
-%doc README.txt README.3.00.0
 %{_bindir}/yodl*
 %{_mandir}/man*/yodl*
 %{_datadir}/%{name}/*.yo
