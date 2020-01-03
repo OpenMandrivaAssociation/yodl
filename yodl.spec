@@ -5,8 +5,8 @@
 
 Summary:	Your Own Document Language
 Name:		yodl
-Version:	4.02.01
-Release:	2
+Version:	4.02.02
+Release:	1
 License:	GPLv3
 Group:		Text tools
 URL:		http://yodl.sourceforge.net
@@ -46,13 +46,13 @@ designed to be easy to use and extensible.
 %setup -q
 
 # build with our compile flags
-sed -i -e 's|"#define COPT.*"|"#define COPT \"%{optflags}\""|' ./yodl/build
+sed -i -e 's|"#define COPT.*"|"#define COPT \"%{optflags} -std=c++2a\""|' ./yodl/build
+sed -e "s!g++!%{__cxx}!" -e "s:#define CLS://\0:" -i yodl/verbinsert/icmconf
+sed -e "s!gcc!%{__cc}!" -e "s!g++!%{__cxx}!" -i yodl/INSTALL.im
 
 %build
-%setup_compile_flags
-export CC=gcc
-export CXX=g++
-
+export CFLAGS="%{optflags}"
+export CXXFLAGS="%{optflags} -std=c++2a"
 cd %{name}
 ./build programs
 ./build macros
