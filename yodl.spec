@@ -5,7 +5,7 @@
 
 Summary:	Your Own Document Language
 Name:		yodl
-Version:	4.02.02
+Version:	4.03.03
 Release:	1
 License:	GPLv3
 Group:		Text tools
