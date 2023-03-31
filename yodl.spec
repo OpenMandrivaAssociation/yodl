@@ -6,7 +6,7 @@
 Summary:	Your Own Document Language
 Name:		yodl
 Version:	4.03.03
-Release:	1
+Release:	2
 License:	GPLv3
 Group:		Text tools
 URL:		http://yodl.sourceforge.net
